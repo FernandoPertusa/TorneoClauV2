@@ -45,7 +45,7 @@ p, h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 .team {
     padding: 10px;
