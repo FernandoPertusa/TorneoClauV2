@@ -72,11 +72,14 @@ h3 {
 /* Ajustes para Ganador Partido 3 y 4 (mover hacia arriba sin afectar Partido 6) */
 .winner:nth-child(3) .team:nth-child(1), /* Ganador Partido 3 */
 .winner:nth-child(3) .team:nth-child(2)  /* Ganador Partido 4 */ {
-    margin-top: -190px; /* Ajuste para moverlos hacia arriba */
+    margin-top: -130px; /* Ajuste para moverlos hacia arriba */
 }
 
-/* Ajustes para la columna de la derecha */
+/* Ajustes para la columna de la derecha (Final con dos ganadores) */
 .final {
-    margin-top: 320px; /* Bajado más para alinear la final con los partidos */
+    margin-top: 320px;
     text-align: center;
+}
+.final .team {
+    margin: 10px 0; /* Ajuste de espacio entre los dos ganadores de semifinal */
 }
