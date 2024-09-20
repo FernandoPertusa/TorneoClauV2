@@ -16,7 +16,7 @@ h1 {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 p, h2 {
-    color: #FF5733d; /* Texto rojo más intenso */
+    color: #FF5733; /* Texto rojo más intenso */
 }
 .section {
     background-color: #231541; /* Mismo color que el fondo */
@@ -30,38 +30,56 @@ p, h2 {
 }
 .bracket {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
 }
 .round {
     display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    margin: 10px 0;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 20px;
 }
-.matchup {
+.matchup, .winner {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin: 10px 0;
 }
 .team {
     padding: 10px;
-    border: 1px solid #ff4d4d; /* Color del borde de los equipos */
+    border: 1px solid #FF5733;
     border-radius: 4px;
-    background-color: #231541; /* Fondo morado oscuro para las parejas */
-    width: 150px; /* Ancho fijo para las parejas */
+    background-color: #231541;
+    width: 150px;
     text-align: center;
-    cursor: pointer; /* Indica que se puede hacer clic */
+    margin: 5px 0;
+    cursor: pointer;
 }
 .line {
+    position: absolute;
     width: 2px;
-    height: 20px;
-    background-color: #ff4d4d; /* Color de la línea */
-    margin: 0 auto; /* Centra la línea */
+    background-color: #FF5733;
 }
-.winner {
-    margin: 10px 0;
-    text-align: center;
+.line::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #FF5733;
+    left: -50px;
+    top: 50%;
+}
+.line::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #FF5733;
+    right: -50px;
+    top: 50%;
 }
 h3 {
     margin: 20px 0 10px;
