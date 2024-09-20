@@ -63,10 +63,10 @@ h3 {
 
 /* Ajustes para la columna central */
 .round:nth-child(2) {
-    margin-top: 50px; /* Reducido para juntar Partido 5 con Ganador Partido 1 y 2 */
+    margin-top: 80px; /* Reducido para juntar Partido 5 con Ganador Partido 1 y 2 */
 }
 .round:nth-child(3) {
-    margin-top: 100px; /* Reducido para juntar Partido 6 con Ganador Partido 3 y 4 */
+    margin-top: 160px; /* Reducido para juntar Partido 6 con Ganador Partido 3 y 4 */
 }
 
 /* Ajustes para la columna de la derecha */
