@@ -76,7 +76,7 @@ h3 {
 
 /* Ajustes para Ganador Partido 3 y 4 (juntarlos a Partido 6) */
 .winner:nth-child(2) {
-    margin-top: -130px; /* Reduce el espacio para acercar los ganadores a Partido 6 */
+    margin-top: -230px; /* Reduce el espacio para acercar los ganadores a Partido 6 */
 }
 
 /* Ajustes para la columna de la derecha */
