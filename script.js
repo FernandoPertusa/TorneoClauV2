@@ -1,47 +1,57 @@
-// Temporizador para el inicio del torneo
-const tournamentStartTime = new Date('2024-09-30T10:00:00').getTime(); // Cambia la fecha y hora aquí
-const countdownElement = document.getElementById('countdown');
+// Temporizador de cuenta atrás
+function iniciarTemporizador(fechaObjetivo) {
+    var countdown = document.getElementById("countdown");
 
-function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = tournamentStartTime - now;
+    function actualizarTemporizador() {
+        var ahora = new Date().getTime();
+        var distancia = fechaObjetivo - ahora;
 
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        var horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+        var segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
-    countdownElement.textContent = `${hours}:${minutes}:${seconds}`;
+        countdown.textContent = horas + ":" + minutos + ":" + segundos;
 
-    if (distance < 0) {
-        clearInterval(timer);
-        countdownElement.textContent = "¡El torneo ha comenzado!";
-    }
-}
-
-const timer = setInterval(updateCountdown, 1000);
-
-// Función para manejar el clic en una pareja
-function setWinner(pareja, semifinalId) {
-    document.getElementById(semifinalId).textContent = pareja;
-}
-
-// Asignar eventos de clic a las parejas
-document.querySelectorAll('.team').forEach(team => {
-    team.addEventListener('click', () => {
-        const partidoId = team.parentNode.parentNode.querySelector('h3').textContent;
-        if (partidoId === "Partido 1") {
-            setWinner(team.textContent, 'semifinal1');
-        } else if (partidoId === "Partido 2") {
-            setWinner(team.textContent, 'semifinal1');
-        } else if (partidoId === "Partido 3") {
-            setWinner(team.textContent, 'semifinal2');
-        } else if (partidoId === "Partido 4") {
-            setWinner(team.textContent, 'semifinal2');
+        if (distancia < 0) {
+            clearInterval(intervalo);
+            countdown.textContent = "EXPIRED";
         }
-    });
-});
+    }
 
-document.getElementById('show-results').addEventListener('click', function() {
-    alert('Aquí se mostrarán los resultados de los partidos.');
-});
+    var intervalo = setInterval(actualizarTemporizador, 1000);
+}
 
+// Iniciar temporizador a una hora específica
+var fechaObjetivo = new Date("Sep 25, 2024 12:00:00").getTime(); // Ajusta la fecha objetivo
+iniciarTemporizador(fechaObjetivo);
+
+// Función para seleccionar el ganador y rellenar las semifinales
+function seleccionarGanador(nombreGanador, idSemifinal) {
+    document.getElementById(idSemifinal).textContent = nombreGanador;
+}
+
+// Añadir eventos a los ganadores de partidos para rellenar las semifinales
+document.getElementById('ganador-partido-1').addEventListener('click', function() {
+    seleccionarGanador('Juan & María', 'ganador-semifinal-1');
+});
+document.getElementById('ganador-partido-2').addEventListener('click', function() {
+    seleccionarGanador('Carlos & Laura', 'ganador-semifinal-1');
+});
+document.getElementById('ganador-partido-3').addEventListener('click', function() {
+    seleccionarGanador('Pedro & Ana', 'ganador-semifinal-2');
+});
+document.getElementById('ganador-partido-4').addEventListener('click', function() {
+    seleccionarGanador('Miguel & Sofía', 'ganador-semifinal-2');
+});
+document.getElementById('ganador-partido-5').addEventListener('click', function() {
+    seleccionarGanador('Luis & Carla', 'ganador-semifinal-3');
+});
+document.getElementById('ganador-partido-6').addEventListener('click', function() {
+    seleccionarGanador('Diego & Teresa', 'ganador-semifinal-3');
+});
+document.getElementById('ganador-partido-7').addEventListener('click', function() {
+    seleccionarGanador('Álvaro & Sara', 'ganador-semifinal-4');
+});
+document.getElementById('ganador-partido-8').addEventListener('click', function() {
+    seleccionarGanador('Javier & Paula', 'ganador-semifinal-4');
+});

@@ -12,55 +12,47 @@
     <p>Bienvenidos al torneo de pádel organizado por el cumpleaños de Claudia. ¡Prepárate para un día lleno de emoción y competición!</p>
 
     <div class="section">
+        <h2>Temporizador de Inicio</h2>
+        <div id="countdown">00:00:00</div>
+    </div>
+
+    <div class="section">
         <h2>Brackets Eliminatorios</h2>
         <div class="bracket">
             <!-- Primera columna con Partidos 1 a 4 -->
             <div class="round">
                 <h3>Partido 1</h3>
-                <div class="matchup">
-                    <div class="team">Pareja 1: Juan & María</div>
-                    <div class="team">Pareja 2: Carlos & Laura</div>
-                </div>
+                <div class="team" id="ganador-partido-1" onclick="seleccionarGanador('Juan & María', 'ganador-semifinal-1')">Pareja 1: Juan & María</div>
+                <div class="team" id="ganador-partido-2" onclick="seleccionarGanador('Carlos & Laura', 'ganador-semifinal-1')">Pareja 2: Carlos & Laura</div>
+
                 <h3>Partido 2</h3>
-                <div class="matchup">
-                    <div class="team">Pareja 3: Pedro & Ana</div>
-                    <div class="team">Pareja 4: Miguel & Sofía</div>
-                </div>
+                <div class="team" id="ganador-partido-3" onclick="seleccionarGanador('Pedro & Ana', 'ganador-semifinal-2')">Pareja 3: Pedro & Ana</div>
+                <div class="team" id="ganador-partido-4" onclick="seleccionarGanador('Miguel & Sofía', 'ganador-semifinal-2')">Pareja 4: Miguel & Sofía</div>
+
                 <h3>Partido 3</h3>
-                <div class="matchup">
-                    <div class="team">Pareja 5: Luis & Carla</div>
-                    <div class="team">Pareja 6: Diego & Teresa</div>
-                </div>
+                <div class="team" id="ganador-partido-5" onclick="seleccionarGanador('Luis & Carla', 'ganador-semifinal-3')">Pareja 5: Luis & Carla</div>
+                <div class="team" id="ganador-partido-6" onclick="seleccionarGanador('Diego & Teresa', 'ganador-semifinal-3')">Pareja 6: Diego & Teresa</div>
+
                 <h3>Partido 4</h3>
-                <div class="matchup">
-                    <div class="team">Pareja 7: Álvaro & Sara</div>
-                    <div class="team">Pareja 8: Javier & Paula</div>
-                </div>
+                <div class="team" id="ganador-partido-7" onclick="seleccionarGanador('Álvaro & Sara', 'ganador-semifinal-4')">Pareja 7: Álvaro & Sara</div>
+                <div class="team" id="ganador-partido-8" onclick="seleccionarGanador('Javier & Paula', 'ganador-semifinal-4')">Pareja 8: Javier & Paula</div>
             </div>
 
-            <div class="line"></div> <!-- Línea conectando -->
-
-            <!-- Segunda columna con Partidos 5 y 6 (Semifinales) -->
+            <!-- Segunda columna con los ganadores (Semifinales) -->
             <div class="round">
-                <h3>Partido 5</h3>
-                <div class="winner">
-                    <div class="team" id="semifinal1">Ganador Partido 1</div>
-                    <div class="team" id="semifinal2">Ganador Partido 2</div>
-                </div>
-                <h3>Partido 6</h3>
-                <div class="winner">
-                    <div class="team" id="semifinal3">Ganador Partido 3</div>
-                    <div class="team" id="semifinal4">Ganador Partido 4</div>
-                </div>
+                <h3>Semifinal 1</h3>
+                <div class="team" id="ganador-semifinal-1">Ganador Partido 1</div>
+                <div class="team" id="ganador-semifinal-2">Ganador Partido 2</div>
+
+                <h3>Semifinal 2</h3>
+                <div class="team" id="ganador-semifinal-3">Ganador Partido 3</div>
+                <div class="team" id="ganador-semifinal-4">Ganador Partido 4</div>
             </div>
 
-            <div class="line"></div> <!-- Línea conectando -->
-
-            <!-- Tercera columna con la Final -->
+            <!-- Columna de la final -->
             <div class="final">
                 <h3>Final</h3>
-                <div class="team" id="final1">Ganador Semifinal 1</div>
-                <div class="team" id="final2">Ganador Semifinal 2</div>
+                <div class="team" id="ganador-final">Ganador Semifinal</div>
             </div>
         </div>
     </div>
