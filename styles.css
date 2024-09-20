@@ -72,7 +72,7 @@ h3 {
 /* Ajustes para Ganador Partido 3 y 4 (mover hacia arriba sin afectar Partido 6) */
 .winner:nth-child(3) .team:nth-child(1), /* Ganador Partido 3 */
 .winner:nth-child(3) .team:nth-child(2)  /* Ganador Partido 4 */ {
-    margin-top: -60px; /* Ajuste para moverlos hacia arriba */
+    margin-top: -90px; /* Ajuste para moverlos hacia arriba */
 }
 
 /* Ajustes para la columna de la derecha */
