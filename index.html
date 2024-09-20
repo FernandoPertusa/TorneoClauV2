@@ -12,40 +12,26 @@
     <p>Bienvenidos al torneo de pádel organizado por el cumpleaños de Claudia. ¡Prepárate para un día lleno de emoción y competición!</p>
 
     <div class="section">
-        <h2>Temporizador de Inicio</h2>
-        <div id="countdown">00:00:00</div>
-    </div>
-
-    <div class="section">
         <h2>Brackets Eliminatorios</h2>
         <div class="bracket">
+            <!-- Primera columna con Partidos 1 a 4 -->
             <div class="round">
+                <h3>Partido 1</h3>
                 <div class="matchup">
                     <div class="team">Pareja 1: Juan & María</div>
                     <div class="team">Pareja 2: Carlos & Laura</div>
                 </div>
+                <h3>Partido 2</h3>
                 <div class="matchup">
                     <div class="team">Pareja 3: Pedro & Ana</div>
                     <div class="team">Pareja 4: Miguel & Sofía</div>
                 </div>
-            </div>
-
-            <div class="line"></div> <!-- Línea conectando -->
-
-            <div class="round">
-                <div class="winner">
-                    <div class="team" id="semifinal1">Ganador Partido 1</div>
-                    <div class="team" id="semifinal2">Ganador Partido 2</div>
-                </div>
-            </div>
-
-            <div class="line"></div> <!-- Línea conectando -->
-
-            <div class="round">
+                <h3>Partido 3</h3>
                 <div class="matchup">
                     <div class="team">Pareja 5: Luis & Carla</div>
                     <div class="team">Pareja 6: Diego & Teresa</div>
                 </div>
+                <h3>Partido 4</h3>
                 <div class="matchup">
                     <div class="team">Pareja 7: Álvaro & Sara</div>
                     <div class="team">Pareja 8: Javier & Paula</div>
@@ -54,7 +40,14 @@
 
             <div class="line"></div> <!-- Línea conectando -->
 
+            <!-- Segunda columna con Partidos 5 y 6 (Semifinales) -->
             <div class="round">
+                <h3>Partido 5</h3>
+                <div class="winner">
+                    <div class="team" id="semifinal1">Ganador Partido 1</div>
+                    <div class="team" id="semifinal2">Ganador Partido 2</div>
+                </div>
+                <h3>Partido 6</h3>
                 <div class="winner">
                     <div class="team" id="semifinal3">Ganador Partido 3</div>
                     <div class="team" id="semifinal4">Ganador Partido 4</div>
@@ -63,7 +56,9 @@
 
             <div class="line"></div> <!-- Línea conectando -->
 
+            <!-- Tercera columna con la Final -->
             <div class="final">
+                <h3>Final</h3>
                 <div class="team" id="final1">Ganador Semifinal 1</div>
                 <div class="team" id="final2">Ganador Semifinal 2</div>
             </div>
