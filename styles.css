@@ -8,18 +8,18 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 20px;
-    color: #FF5733; /* Texto rojo más intenso */
+    color: #FF5733; /* Color de texto basado en el logo */
 }
 h1 {
     font-size: 3em;
-    color: #FF5733; /* Texto rojo más intenso */
+    color: #FF5733;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 p, h2 {
-    color: #FF5733; /* Texto rojo más intenso */
+    color: #FF5733;
 }
 .section {
-    background-color: #231541; /* Mismo color que el fondo */
+    background-color: #231541;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
@@ -30,21 +30,20 @@ p, h2 {
 }
 .bracket {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px 0;
+    flex-direction: row;
+    justify-content: space-between;
     position: relative;
+    margin: 20px 0;
+    width: 100%;
 }
 .round {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 20px;
 }
 .matchup, .winner {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: 10px 0;
 }
@@ -55,35 +54,33 @@ p, h2 {
     background-color: #231541;
     width: 150px;
     text-align: center;
-    margin: 5px 0;
     cursor: pointer;
 }
 .line {
-    position: absolute;
+    position: relative;
     width: 2px;
+    background-color: #FF5733;
+    height: 100%;
+    margin: 0 auto;
+}
+.line::before, .line::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
     background-color: #FF5733;
 }
 .line::before {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 2px;
-    background-color: #FF5733;
+    top: 0;
     left: -50px;
-    top: 50%;
 }
 .line::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 2px;
-    background-color: #FF5733;
-    right: -50px;
-    top: 50%;
+    bottom: 0;
+    left: -50px;
 }
 h3 {
     margin: 20px 0 10px;
-    color: #FF5733; /* Color rojo para las rondas */
+    color: #FF5733;
 }
 .final {
     margin-top: 20px;
