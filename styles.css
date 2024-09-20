@@ -66,17 +66,13 @@ h3 {
     margin-top: 80px; /* Posición de Partido 5 */
 }
 .round:nth-child(3) {
-    margin-top: 160px; /* Posición de Partido 6 (NO SE MUEVE) */
+    margin-top: 160px; /* Posición de Partido 6 (no se mueve) */
 }
 
-/* Ajustes para Ganador Partido 1 y 2 (juntarlos a Partido 5) */
-.winner:nth-child(1) {
-    margin-top: -130px; /* Reducido para juntar Ganadores con Partido 5 */
-}
-
-/* Ajustes para Ganador Partido 3 y 4 (moverlos hacia arriba) */
-.winner:nth-child(4) {
-    margin-top: -160px; /* Subido para alinear Ganador Partido 3 y 4 sin mover Partido 6 */
+/* Ajustes para Ganador Partido 3 y 4 (mover hacia arriba sin afectar Partido 6) */
+.winner:nth-child(3) .team:nth-child(1), /* Ganador Partido 3 */
+.winner:nth-child(3) .team:nth-child(2)  /* Ganador Partido 4 */ {
+    margin-top: -60px; /* Ajuste para moverlos hacia arriba */
 }
 
 /* Ajustes para la columna de la derecha */
