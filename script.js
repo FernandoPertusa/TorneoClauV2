@@ -30,6 +30,11 @@ function seleccionarGanador(nombreGanador, idSemifinal) {
     document.getElementById(idSemifinal).textContent = nombreGanador;
 }
 
+// Función para seleccionar el ganador de semifinal y rellenar la final
+function seleccionarGanadorSemifinal(nombreGanador, idFinal) {
+    document.getElementById(idFinal).textContent = nombreGanador;
+}
+
 // Añadir eventos a los ganadores de partidos para rellenar las semifinales
 document.getElementById('ganador-partido-1').addEventListener('click', function() {
     seleccionarGanador('Juan & María', 'ganador-semifinal-1');
@@ -54,4 +59,18 @@ document.getElementById('ganador-partido-7').addEventListener('click', function(
 });
 document.getElementById('ganador-partido-8').addEventListener('click', function() {
     seleccionarGanador('Javier & Paula', 'ganador-semifinal-4');
+});
+
+// Añadir eventos a los ganadores de semifinales para rellenar la final
+document.getElementById('ganador-semifinal-1').addEventListener('click', function() {
+    seleccionarGanadorSemifinal('Juan & María', 'ganador-semifinal-final-1');
+});
+document.getElementById('ganador-semifinal-2').addEventListener('click', function() {
+    seleccionarGanadorSemifinal('Pedro & Ana', 'ganador-semifinal-final-1');
+});
+document.getElementById('ganador-semifinal-3').addEventListener('click', function() {
+    seleccionarGanadorSemifinal('Luis & Carla', 'ganador-semifinal-final-2');
+});
+document.getElementById('ganador-semifinal-4').addEventListener('click', function() {
+    seleccionarGanadorSemifinal('Álvaro & Sara', 'ganador-semifinal-final-2');
 });
