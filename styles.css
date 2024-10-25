@@ -1,9 +1,9 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; /* Alinear verticalmente el contenido */
     flex-direction: column;
-    height: auto;
+    height: 100vh; /* Usar toda la altura de la pantalla */
     background-color: #231541; /* Fondo morado oscuro */
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
